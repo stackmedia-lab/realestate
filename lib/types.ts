@@ -1,0 +1,47 @@
+export type Property = {
+  _id: string;
+  slug: string;
+  title: string;
+  price: number;
+  status: 'for-sale' | 'for-rent' | 'sold' | 'pending';
+  propertyType: string;
+  beds: number;
+  baths: number;
+  sqft: number;
+  lotSize?: string;
+  yearBuilt?: number;
+  address: string;
+  city: string;
+  state: string;
+  zip: string;
+  description: string;
+  features: string[];
+  mainImage: string;
+  gallery: string[];
+  agentId?: string;
+  featured?: boolean;
+};
+export type Agent = {
+  _id: string;
+  slug: string;
+  name: string;
+  title: string;
+  phone: string;
+  email: string;
+  bio: string;
+  photo: string;
+  license?: string;
+  specialties: string[];
+  yearsExperience: number;
+};
+export type Post = {
+  _id: string;
+  slug: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  coverImage: string;
+  publishedAt: string;
+  authorName: string;
+  body?: any;
+};
